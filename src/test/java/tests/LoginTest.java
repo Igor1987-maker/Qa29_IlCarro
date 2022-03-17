@@ -1,10 +1,13 @@
 package tests;
 
+import com.jayway.restassured.RestAssured;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase{
+
+    RestAssured.baseURI = "https://contacts-telran.herokuapp.com/api/contact";
 
     @Test
     public void loginSuccess(){
